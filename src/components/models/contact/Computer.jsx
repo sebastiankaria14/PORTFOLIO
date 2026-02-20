@@ -1,6 +1,7 @@
 import { useGLTF } from "@react-three/drei";
+import React from "react";
 
-export function Computer(props) {
+export const Computer = React.memo(function Computer(props) {
   const { nodes, materials } = useGLTF(
     "/models/computer-optimized-transformed.glb"
   );
@@ -23,7 +24,7 @@ export function Computer(props) {
       </group>
     </group>
   );
-}
+});
 
 useGLTF.preload("/models/computer-optimized-transformed.glb");
 

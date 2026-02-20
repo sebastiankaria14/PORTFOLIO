@@ -2,88 +2,97 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { projects } from "../constants";
+import TitleHeader from "../components/TitleHeader";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const AppShowcase = () => {
   const sectionRef = useRef(null);
-  const rydeRef = useRef(null);
-  const libraryRef = useRef(null);
-  const ycDirectoryRef = useRef(null);
 
   useGSAP(() => {
-    // Animation for the main section
+    // Animations for each project card
     gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
-    );
-
-    // Animations for each app showcase
-    const cards = [rydeRef.current, libraryRef.current, ycDirectoryRef.current];
-
-    cards.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        {
-          y: 50,
-          opacity: 0,
+      ".project-card",
+      {
+        y: 30,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: "power2.out",
+        stagger: 0.1,
+        scrollTrigger: {
+          trigger: ".projects-grid",
+          start: "top 85%",
+          once: true, // Only animate once
         },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          delay: 0.3 * (index + 1),
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom-=100",
-          },
-        }
-      );
-    });
+      }
+    );
   }, []);
 
   return (
-    <div id="work" ref={sectionRef} className="app-showcase">
-      <div className="w-full">
-        <div className="showcaselayout">
-          <div ref={rydeRef} className="first-project-wrapper">
-            <div className="image-wrapper">
-              <img src="/images/project1.png" alt="Ryde App Interface" />
-            </div>
-            <div className="text-content">
-              <h2>
-                On-Demand Rides Made Simple with a Powerful, User-Friendly App
-                called Ryde
-              </h2>
-              <p className="text-white-50 md:text-xl">
-                An app built with React Native, Expo, & TailwindCSS for a fast,
-                user-friendly experience.
-              </p>
-            </div>
-          </div>
-
-          <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={libraryRef}>
-              <div className="image-wrapper bg-[#FFEFDB]">
-                <img
-                  src="/images/project2.png"
-                  alt="Library Management Platform"
+    <section id="work" ref={sectionRef} className="flex-center section-padding">
+      <div className="w-full md:px-10 px-5">
+        <TitleHeader
+          title="My Projects"
+          sub="🚀 Work & Creations"
+        />
+        
+        <div className="projects-grid mt-20 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+          {projects.map((project) => (
+            <div key={project.id} className="project-card group">
+              <div className="project-image-wrapper overflow-hidden rounded-t-2xl">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
                 />
               </div>
-              <h2>The Library Management Platform</h2>
-            </div>
-
-            <div className="project" ref={ycDirectoryRef}>
-              <div className="image-wrapper bg-[#FFE7EB]">
-                <img src="/images/project3.png" alt="YC Directory App" />
+              
+              <div className="project-content bg-black-200 p-6 rounded-b-2xl border border-black-300">
+                <h3 className="text-2xl font-semibold text-white mb-3">
+                  {project.title}
+                </h3>
+                
+                <p className="text-white-50 mb-4 text-sm">
+                  {project.description}
+                </p>
+                
+                <div className="project-tech flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, index) => (
+                    <span 
+                      key={index}
+                      className="px-3 py-1 bg-black-300 text-white-800 rounded-full text-xs border border-black-500"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="project-links flex gap-4">
+                  <a 
+                    href={project.liveDemo} 
+                    className="flex-1 text-center py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:opacity-90 transition-opacity text-sm font-medium"
+                  >
+                    Live Demo
+                  </a>
+                  <a 
+                    href={project.github} 
+                    className="flex-1 text-center py-2 border border-white-500 text-white rounded-lg hover:bg-black-300 transition-colors text-sm font-medium"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </div>
-              <h2>YC Directory - A Startup Showcase App</h2>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

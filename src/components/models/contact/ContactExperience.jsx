@@ -1,19 +1,30 @@
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import React, { Suspense } from "react";
 
 import Computer from "./Computer";
 
-const ContactExperience = () => {
+const ContactExperience = React.memo(() => {
   return (
-    <Canvas shadows camera={{ position: [0, 3, 7], fov: 45 }}>
+    <Canvas 
+      shadows 
+      camera={{ position: [0, 3, 7], fov: 45 }}
+      dpr={[1, 1.5]} // Reduced for better performance
+      frameloop="demand" // Only render when needed
+      gl={{
+        antialias: false, // Disable for performance
+        powerPreference: "high-performance",
+        stencil: false
+      }}
+    >
       <ambientLight intensity={0.5} color="#fff4e6" />
 
-      <directionalLight position={[5, 5, 3]} intensity={2.5} color="#ffd9b3" />
+      <directionalLight position={[5, 5, 3]} intensity={2} color="#ffd9b3" />
 
       <directionalLight
         position={[5, 9, 1]}
         castShadow
-        intensity={2.5}
+        intensity={2}
         color="#ffd9b3"
       />
 
@@ -21,6 +32,9 @@ const ContactExperience = () => {
         enableZoom={false}
         minPolarAngle={Math.PI / 5}
         maxPolarAngle={Math.PI / 2}
+        enableDamping
+        dampingFactor={0.05}
+        makeDefault
       />
 
       <group scale={[1, 1, 1]}>
@@ -35,10 +49,14 @@ const ContactExperience = () => {
       </group>
 
       <group scale={0.03} position={[0, -1.49, -2]} castShadow>
-        <Computer />
+        <Suspense fallback={null}>
+          <Computer />
+        </Suspense>
       </group>
     </Canvas>
   );
-};
+});
+
+ContactExperience.displayName = "ContactExperience";
 
 export default ContactExperience;

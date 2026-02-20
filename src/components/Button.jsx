@@ -1,10 +1,12 @@
+import React from "react";
+
 /**
  * A reusable CTA button component.
  * When clicked, it scrolls smoothly to the section with ID "counter",
  * with a small offset from the top for better visual placement.
  */
 
-const Button = ({ text, className, id }) => {
+const Button = React.memo(({ text, className, id }) => {
   return (
     <a
       onClick={(e) => {
@@ -36,6 +38,8 @@ const Button = ({ text, className, id }) => {
       </div>
     </a>
   );
-};
+});
+
+Button.displayName = "Button";
 
 export default Button;

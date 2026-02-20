@@ -29,10 +29,14 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 2, suffix: "+", label: "Years of Experience in Tech & Leadership" },
+  { value: 15, suffix: "+", label: "Projects & Applications Built" },
+  { value: 17, suffix: "+", label: "Hackathons & Events Organized/Participated" },
+  { value: 4, suffix: "+", label: "Leadership Roles & Team Positions" },
+  { value: 100, suffix: "+", label: "Students Impacted Through Initiatives" },
+  { value: 95, suffix: "%", label: "Project Success & Completion Rate" },
+  { value: 10, suffix: "+", label: "Technical Certifications Achieved" },
+  { value: 15, suffix: "+", label: "Open Source Contributions" },
 ];
 
 const logoIconsList = [
@@ -107,7 +111,7 @@ const techStackImgs = [
     imgPath: "/images/logos/three.png",
   },
   {
-    name: "Project Manager",
+    name: "Project Management",
     imgPath: "/images/logos/git.svg",
   },
 ];
@@ -116,70 +120,128 @@ const techStackIcons = [
   {
     name: "React Developer",
     modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
+    scale: 0.9,
     rotation: [0, 0, 0],
   },
   {
     name: "Python Developer",
     modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
+    scale: 0.7,
     rotation: [0, 0, 0],
   },
   {
     name: "Backend Developer",
     modelPath: "/models/node-transformed.glb",
-    scale: 5,
+    scale: 4.5,
     rotation: [0, -Math.PI / 2, 0],
   },
   {
     name: "Interactive Developer",
     modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
+    scale: 0.045,
     rotation: [0, 0, 0],
   },
   {
-    name: "Project Manager",
+    name: "Project Management",
     modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
+    scale: 0.045,
     rotation: [0, -Math.PI / 4, 0],
   },
 ];
 
+const projects = [
+  {
+    id: 1,
+    title: "E-Commerce Platform",
+    description: "A complete e-commerce platform with shopping cart, payment, and admin dashboard features.",
+    image: "/images/Cleveroad.jpg",
+    technologies: ["React", "Node.js", "MongoDB"],
+    liveDemo: "#",
+    github: "#"
+  },
+  {
+    id: 2,
+    title: "Portfolio Website",
+    description: "An interactive portfolio website with animations and responsive design to showcase work.",
+    image: "/images/pf.png",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    liveDemo: "#",
+    github: "#"
+  },
+  {
+    id: 3,
+    title: "DataForge",
+    description: "A task management application with drag-and-drop and real-time collaboration features.",
+    image: "/images/Task manager app.jpg",
+    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+    liveDemo: "#",
+    github: "#"
+  },
+  {
+    id: 4,
+    title: "JUGEXA",
+    description: "An interactive weather dashboard with location-based forecasts, weather maps, and historical data visualization.",
+    image: "/images/Weather Forecast Dashboard.jpg",
+    technologies: ["JavaScript", "Chart.js", "OpenWeather API"],
+    liveDemo: "#",
+    github: "#"
+  },
+  {
+    id: 5,
+    title: "Social Media Dashboard",
+    description: "A comprehensive social media management dashboard with analytics, scheduling, and multi-platform integration.",
+    image: "/images/Dashboard - Social Media Analytics.jpg",
+    technologies: ["React", "D3.js", "Express.js"],
+    liveDemo: "#",
+    github: "#"
+  },
+  {
+    id: 6,
+    title: "EventVista",
+    description: "A full-featured event management platform with scheduling, ticketing, and analytics features.",
+    image: "/images/EventVista.jpg",
+    technologies: ["Next.js", "Prisma", "PostgreSQL"],
+    liveDemo: "#",
+    github: "#"
+  }
+];
+
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
+    review: "Sebastian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
     logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
+    title: "Software Engineer",
     date: "January 2023 - Present",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Built and deployed scalable software solutions for DBIT platform.",
+      "Collaborated with cross-functional teams to deliver end-to-end features.",
+      "Developed APIs and integrated external services.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    review: "Sebastian's leadership as CSI-DBIT Chairperson has been exceptional. He successfully managed a large student chapter and organized impactful technical events.",
+    logoPath: "/images/csi.png",
+    title: "CSI-DBIT Chairperson",
+    date: "July 2025 - May 2026",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+      "Led the Computer Society of India student chapter, overseeing 60+ members across technical, design, and event teams.",
+      "Organized hackathons, coding challenges, and workshops in collaboration with industry experts.",
+      "Managed sponsorships, partnerships, and outreach for major intercollegiate events.",
+      "Mentored students in AI, web development, and open-source initiatives.",
+      "Improved team workflow using project management and collaboration tools.",
     ],
   },
   {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
+    review: "Sebastian's role as Assistant Event Head demonstrated excellent organizational and coordination skills. He played a key role in executing multiple successful technical and cultural events.",
+    logoPath: "/images/csi.png",
+    title: "Asst. Event Head",
+    date: "August 2024 - May 2025",
     responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Assisted in planning, coordinating, and executing technical and cultural events across the institute.",
+      "Collaborated with multiple student committees to ensure smooth event operations and scheduling.",
+      "Managed on-ground logistics, registrations, and participant coordination during intercollegiate festivals.",
+      "Contributed to event promotion through digital marketing and social media campaigns.",
+      "Supported sponsorship and guest coordination for workshops and hackathons.",
     ],
   },
 ];
@@ -201,45 +263,45 @@ const expLogos = [
 
 const testimonials = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
+    name: "Dr. Sunantha Guruswamy",
+    mentions: "HoD, Information Technology",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "Sebastian consistently demonstrates exceptional problem-solving skills in my AI course. His project showcased not only technical proficiency but also creative thinking. He's one of the most dedicated students I've taught.",
     imgPath: "/images/client1.png",
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
+    name: "Dhurv Naik",
+    mentions: "Team Lead, Codeverse Hackathon",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "Working with Sebastian during the 48-hour hackathon was incredible. He took ownership of the frontend development and delivered a polished interface under tight deadlines. His ability to learn new technologies quickly is impressive.",
     imgPath: "/images/client3.png",
   },
   {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
+    name: "Owais Shaikh",
+    mentions: "Project Partner, Third Year",
     review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "Sebastian and I collaborated on our AI project, and his contribution was outstanding. He handled the full-stack development with such precision and always went the extra mile to ensure our project stood out. A true team player!",
     imgPath: "/images/client2.png",
   },
   {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
+    name: "Prof. Prasad Padalkar",
+    mentions: "Mentor, Software Engineering Lab",
     review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+      "Sebastian's work in the software engineering lab has been exemplary. He not only completes assignments with high quality but also helps fellow students debug their code. His passion for learning is evident in everything he does.",
     imgPath: "/images/client5.png",
   },
   {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
+    name: "Kalanidhi Namboothiri",
+    mentions: "Event Head, CSI-DBIT",
     review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+      "As a Chairperson of our coding club, Sebastian has contributed significantly to our community projects. He led a workshop on React and Three.js that was highly appreciated. His enthusiasm for technology is contagious!",
     imgPath: "/images/client4.png",
   },
   {
-    name: "Albert Flores",
-    mentions: "@albertflores",
+    name: "Jigyasa Rathi",
+    mentions: "Peer, Study Group",
     review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+      "Sebastian is not just a brilliant coder but also an excellent collaborator. During our group projects, he always ensures everyone understands the architecture and helps debug issues patiently. His technical skills and friendly attitude make him invaluable.",
     imgPath: "/images/client6.png",
   },
 ];
@@ -248,18 +310,17 @@ const socialImgs = [
   {
     name: "insta",
     imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
+    url: "https://www.instagram.com/sebastian_snapps/",
   },
   {
     name: "x",
     imgPath: "/images/x.png",
+    url: "https://x.com/KariaSebastian",
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    url: "https://www.linkedin.com/in/sebastiankaria/",
   },
 ];
 
@@ -268,6 +329,7 @@ export {
   abilities,
   logoIconsList,
   counterItems,
+  projects,
   expCards,
   expLogos,
   testimonials,
@@ -276,3 +338,4 @@ export {
   techStackImgs,
   navLinks,
 };
+

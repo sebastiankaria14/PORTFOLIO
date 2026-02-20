@@ -11,82 +11,53 @@ gsap.registerPlugin(ScrollTrigger);
 const Experience = () => {
   useGSAP(() => {
     // Loop through each timeline card and animate them in
-    // as the user scrolls to each card
     gsap.utils.toArray(".timeline-card").forEach((card) => {
-      // Animate the card coming in from the left
-      // and fade in
       gsap.from(card, {
-        // Move the card in from the left
-        xPercent: -100,
-        // Make the card invisible at the start
+        xPercent: -50,
         opacity: 0,
-        // Set the origin of the animation to the left side of the card
         transformOrigin: "left left",
-        // Animate over 1 second
-        duration: 1,
-        // Use a power2 ease-in-out curve
-        ease: "power2.inOut",
-        // Trigger the animation when the card is 80% of the way down the screen
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
-          // The card is the trigger element
           trigger: card,
-          // Trigger the animation when the card is 80% down the screen
-          start: "top 80%",
+          start: "top 85%",
+          once: true, // Only animate once
         },
       });
     });
 
-    // Animate the timeline height as the user scrolls
-    // from the top of the timeline to 70% down the screen
-    // The timeline height should scale down from 1 to 0
-    // as the user scrolls up the screen
+    // Animate the timeline height
     gsap.to(".timeline", {
-      // Set the origin of the animation to the bottom of the timeline
       transformOrigin: "bottom bottom",
-      // Animate the timeline height over 1 second
-      ease: "power1.inOut",
-      // Trigger the animation when the timeline is at the top of the screen
-      // and end it when the timeline is at 70% down the screen
+      ease: "none",
       scrollTrigger: {
         trigger: ".timeline",
         start: "top center",
         end: "70% center",
-        // Update the animation as the user scrolls
+        scrub: 0.5, // Smooth scrubbing
         onUpdate: (self) => {
-          // Scale the timeline height as the user scrolls
-          // from 1 to 0 as the user scrolls up the screen
           gsap.to(".timeline", {
             scaleY: 1 - self.progress,
+            duration: 0.1,
           });
         },
       },
     });
 
-    // Loop through each expText element and animate them in
-    // as the user scrolls to each text element
+    // Loop through each expText element
     gsap.utils.toArray(".expText").forEach((text) => {
-      // Animate the text opacity from 0 to 1
-      // and move it from the left to its final position
-      // over 1 second with a power2 ease-in-out curve
       gsap.from(text, {
-        // Set the opacity of the text to 0
         opacity: 0,
-        // Move the text from the left to its final position
-        // (xPercent: 0 means the text is at its final position)
         xPercent: 0,
-        // Animate over 1 second
-        duration: 1,
-        // Use a power2 ease-in-out curve
-        ease: "power2.inOut",
-        // Trigger the animation when the text is 60% down the screen
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
-          // The text is the trigger element
           trigger: text,
-          // Trigger the animation when the text is 60% down the screen
-          start: "top 60%",
+          start: "top 70%",
+          once: true, // Only animate once
         },
       });
-    }, "<"); // position parameter - insert at the start of the animation
+    });
   }, []);
 
   return (
@@ -105,9 +76,7 @@ const Experience = () => {
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
                   <GlowCard card={card}>
-                    <div>
-                      <img src={card.imgPath} alt="exp-img" />
-                    </div>
+                    {/* Image removed - keeping card and review only */}
                   </GlowCard>
                 </div>
                 <div className="xl:w-4/6">
