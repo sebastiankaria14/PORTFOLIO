@@ -1,142 +1,98 @@
-<div align="center">
-  <br />
-    <a href="https://www.youtube.com/watch?v=E-fdPfRxkzQ" target="_blank">
-      <img src="public/images/readme.png" alt="Project Banner">
-    </a>
-  <br />
+# Sebastian Karia
 
-  <div>
-    <img src="https://img.shields.io/badge/-Three.js-black?style=for-the-badge&logo=three.js&logoColor=white" />
-    <img src="https://img.shields.io/badge/-GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  </div>
+## About Me
 
-  <h3 align="center">Interactive 3D Portfolio Website</h3>
+I'm **Sebastian Karia**, a passionate software engineer and developer with a focus on building high-performance applications and developer tooling. I specialize in creating efficient, scalable solutions that solve real-world problems.
 
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
-</div>
+## What I Do
 
-## 📋 <a name="table">Table of Contents</a>
+- **🔧 Full-Stack Development**: Proficient in building modern web applications with React, TypeScript, and cutting-edge frameworks
+- **⚡ Systems Programming**: Experienced with Rust for high-performance, low-level systems and desktop applications
+- **🐳 DevOps & Containerization**: Expert in Docker, container orchestration, and development environment automation
+- **🎯 Developer Tools**: Creating tools that enhance developer productivity and workflow efficiency
+- **🚀 Performance Optimization**: Obsessed with speed, efficiency, and creating lightweight solutions
 
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🔗 [Assets & Snippets](#links)
-6. 🚀 [More](#more)
+## Technical Expertise
 
-## ⚠️ Tutorial
+### Frontend Technologies
+- React, TypeScript, Vite
+- Tailwind CSS, Modern UI/UX
+- State Management (Zustand, Redux)
+- Real-time interfaces and event-driven architectures
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>.
+### Backend & Systems
+- Rust (Tokio, async programming)
+- Node.js, Python
+- Docker & Container Technologies
+- SQLite, Database Design
+- API Development & Microservices
 
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
+### Desktop Applications
+- Tauri Framework
+- Cross-platform development
+- Native system integration
+- IPC and event-driven communication
 
-<a href="https://www.youtube.com/watch?v=E-fdPfRxkzQ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+## Current Projects
 
-## <a name="introduction">🤖 Introduction</a>
+I'm currently working on **DevSuite**, a revolutionary local developer orchestrator that manages multiple heterogeneous projects through Docker-based isolation and smart process management. This project showcases my ability to:
+- Design complex system architectures
+- Build performant desktop applications
+- Create intuitive developer experiences
+- Integrate multiple technologies seamlessly
 
-The 3D Portfolio project is a highly engaging personal website that features animated 3D scenes, smooth camera transitions, interactive model showcases, and responsive design. It’s ideal for developers, designers, or freelancers looking to stand out in the digital crowd.
+## Philosophy
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over **50k+** members. It's a place where people help each other out.
+I believe in:
+- **Clean, maintainable code** over quick hacks
+- **Performance and efficiency** as core values
+- **Developer experience** as a first-class concern
+- **Open-source collaboration** and knowledge sharing
+- **Continuous learning** and staying current with technology
 
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
+## Skills & Technologies
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
-
-- Three.js
-- React Three Fiber
-- Drei
-- GSAP
-- Tailwind CSS
-- Vite
-- React 19
-
-## <a name="features">🔋 Features</a>
-
-### Features of the 3D Portfolio Project
-
-👉 Animated 3D models and reveal animations
-
-👉 Realistic lighting and shadows
-
-👉 GSAP-powered scroll interactions
-
-👉 Responsive design with Tailwind CSS and Flexbox/Grid
-
-👉 Micro Interactions
-
-👉 Multi-section layout (About, Projects, Contact)
-
-👉 Mobile optimized 3D experience
-
-and many more, including code architecture and reusability.
-
-## <a name="quick-start">🤸 Quick Start</a>
-
-Follow these steps to set up the project locally on your machine.
-
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-
-**Cloning the Repository**
-
-```bash
-git clone https://github.com/adrianhajdin/3d-portfolio.git
-cd 3d-portfolio
+```
+Languages:      TypeScript, Rust, JavaScript, Python
+Frontend:       React, Vite, HTML5, CSS3, Tailwind
+Backend:        Node.js, Rust, RESTful APIs
+Desktop:        Tauri, Electron alternatives
+DevOps:         Docker, Docker Compose, CI/CD
+Databases:      SQLite, PostgreSQL, MongoDB
+Tools:          Git, VS Code, Linux, Windows
+Architecture:   Event-driven, Microservices, MVC
 ```
 
-**Installation**
+## My Vision
 
-Install the project dependencies using npm:
+I strive to build software that:
+- Runs fast and uses minimal resources
+- Provides exceptional user experiences
+- Solves real problems for real people
+- Is maintainable and well-documented
+- Leverages the right tool for the job
 
-```bash
-npm install
-```
+## Projects Showcase
 
-**Set Up Environment Variables**
+### DevSuite
+A high-performance desktop application for managing and orchestrating multiple development projects with Docker integration, real-time monitoring, and smart port management. Built with Tauri and Rust for maximum efficiency.
 
-Create a new file named `.env` in the root of your project and add the following content:
+**Tech Stack**: Tauri, Rust, React, TypeScript, Docker, Bollard, SQLite
 
-```env
-VITE_APP_EMAILJS_SERVICE_ID=
-VITE_APP_EMAILJS_TEMPLATE_ID=
-VITE_APP_EMAILJS_PUBLIC_KEY=
-```
+## Contact & Connect
 
-Replace the placeholder values with your actual **[EmailJS](https://www.emailjs.com/)** credentials.
+I'm always interested in collaborating on interesting projects, discussing technology, or helping fellow developers.
 
-**Running the Project**
+**Portfolio**: This repository showcases my work and coding style  
+**Location**: Working remotely, building the future
 
-```bash
-npm run dev
-```
+## Stats & Achievements
 
-Open [http://localhost:5173](http://localhost:5173/) in your browser to view the project.
+- Building production-grade desktop applications with Tauri
+- Contributing to the developer tools ecosystem
+- Championing performance-first development
+- Creating solutions that developers actually want to use
 
+---
 
-## <a name="links">🔗 Assets and Snippets</a>
-
-Assets and snippets used in the project can be found in the **[video kit](https://jsm.dev/pfolio25-kit)**.
-
-<a href="https://jsm.dev/pfolio25-kit" target="_blank">
-  <img src="public/images/readme-video-kit.png" alt="Video Kit Banner">
-</a>
-
-
-## <a name="more">🚀 More</a>
-
-**Advance your skills with JSM Pro Courses**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with
-detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://beta.jsmastery.pro/" target="_blank">
-  <img src="public/images/readme-bottom.png" alt="Project Banner">
-</a>
+*"Code is poetry, and performance is art."* - Sebastian Karia
