@@ -175,7 +175,7 @@ const projects = [
     image: "/images/Task manager app.jpg",
     technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
     liveDemo: "#",
-    github: "#"
+    github: "https://github.com/sebastiankaria14/DataForge"
   },
   {
     id: 4,
@@ -184,7 +184,7 @@ const projects = [
     image: "/images/Weather Forecast Dashboard.jpg",
     technologies: ["JavaScript", "Chart.js", "OpenWeather API"],
     liveDemo: "#",
-    github: "#"
+    github: "https://github.com/sebastiankaria14/JUDEXA"
   },
   {
     id: 5,
@@ -202,7 +202,7 @@ const projects = [
     image: "/images/EventVista.jpg",
     technologies: ["Next.js", "Prisma", "PostgreSQL"],
     liveDemo: "#",
-    github: "#"
+    github: "https://github.com/sebastiankaria14/EventVista"
   }
 ];
 
